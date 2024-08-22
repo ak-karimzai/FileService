@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: 'jdbc:postgresql://psql:5432/file-info'
+    username: root
+    password: root
+    driver-class-name: 'org.postgresql.Driver'
+
+  flyway:
+    enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+
+file-system:
+  storage_dir: "/files/"
